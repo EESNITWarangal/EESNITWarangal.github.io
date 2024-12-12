@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Databank</title>
+    <link rel="stylesheet" href="databank.css">
+</head>
+<body>
+    <!-- Header Section with Title and Buttons -->
+    <div class="header-section">
+        <div class="databank-title">
+            <span>EES</span>
+            <span class="subtext">DATABANK</span>
+        </div>
+        <div class="header-buttons">
+            <a href="#" class="header-button" id="announcements-btn">Announcements</a>
+            <a href="#" class="header-button" id="help-btn">Help</a>
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <div class="resources-container">
+        <h2 class="resources-title">Choose Your Year to Access Resources</h2>
+        <div class="container">
+            <a href="https://drive.google.com/drive/folders/1lb8LSwypAcJ3p3gWCyJFcPqOsUYspl8V" class="box">1st Year</a>
+            <a href="https://drive.google.com/drive/folders/1lhUe3vseIxr04SZp1y9geN8yqs0lu884" class="box">2nd Year</a>
+            <a href="https://drive.google.com/drive/folders/1ljSwgfuMNJQ7mguzQyRaWGePA2zBH1Uy" class="box">3rd Year</a>
+            <a href="https://drive.google.com/drive/folders/1lngxzisIDHRA94mWxSHg6aWppIsGZRhX" class="box">4th Year</a>
+        </div>
+    </div>
+
+<!-- Navigation Bar -->
+<div class="top_bar" > 
+    <div class="logo">
+        <img src="logo-common_photos/EES_symbol.png" alt="Logo">
+    </div>
+    <div style="display: flex;"> 
+        <div style="display:flex; margin-right:150px;"> 
+            <div> 
+            <h3 style="color:white; padding-top:20px"> ELECTRICAL ENGINEERING SOCIETY</h3>
+            </div> 
+            <div class="thunder">
+                <img src="logo-common_photos/Thunder-image.png" alt="thunder">
+            </div>
+        </div>
+        <div style="padding-top: 40px; "> 
+        <nav>
+            <ul>
+                <li><a href="About.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="databank.html">Data Bank</a></li>
+                <li><a href="placements.html">Placements and Internships</a></li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+</div> 
+
+
+    <!-- Help Modal -->
+<div id="help-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" id="help-close">&times;</span> <!-- Red Cross Icon -->
+        <h2>Help</h2>
+        <p>Ensure that you are logged in with the institute's mail ID to access resources.</p>
+        <p>For any assistance, please contact us at <a href="mailto:amittsharma4567@gmail.com">amittsharma4567@gmail.com</a>.</p>
+    </div>
+</div>
+
+<!-- Announcements Modal -->
+<div id="announcements-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close" id="announcements-close">&times;</span> <!-- Red Cross Icon -->
+        <h2>Announcements</h2>
+        <p>No new announcements at the moment. Stay tuned!</p>
+    </div>
+</div>
+
+
+    <!-- Script for Modal Functionality -->
+    <script>
+        // Modal Elements
+        const announcementsModal = document.getElementById('announcements-modal');
+        const helpModal = document.getElementById('help-modal');
+
+        // Buttons
+        const announcementsBtn = document.getElementById('announcements-btn');
+        const helpBtn = document.getElementById('help-btn');
+
+        // Close Buttons
+        const announcementsClose = document.getElementById('announcements-close');
+        const helpClose = document.getElementById('help-close');
+
+        // Show Modals
+        announcementsBtn.onclick = () => announcementsModal.style.display = 'block';
+        helpBtn.onclick = () => helpModal.style.display = 'block';
+
+        // Close Modals
+        announcementsClose.onclick = () => announcementsModal.style.display = 'none';
+        helpClose.onclick = () => helpModal.style.display = 'none';
+
+        // Close Modals When Clicking Outside
+        window.onclick = (event) => {
+            if (event.target === announcementsModal) {
+                announcementsModal.style.display = 'none';
+            }
+            if (event.target === helpModal) {
+                helpModal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

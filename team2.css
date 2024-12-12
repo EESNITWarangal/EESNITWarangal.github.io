@@ -1,0 +1,253 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-image: url("teamPhotographs/circuitlines\ whiteBG.png");
+    background-size: contain;
+    color: #333;
+}
+
+/* navigation bar styling */
+
+.top_bar {
+    display: flex;
+    background-color: #0e0e0e; /* Dark background for the bar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    align-items: center;
+    z-index: 1000;
+    padding-right: 50 px;
+}
+
+.logo img {
+    width: 85px;
+    margin-right: 20px; /* Gap between logo and the first link */
+}
+
+.thunder img {
+    width: 50px;
+    margin-right: 20px; /* Gap between logo and the first link */
+    padding-top: 25px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* Equal gap between the links */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0; /* No extra margin */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight on hover */
+}
+/* for quote waala div */
+.quote{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #220f90;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+.author{
+    font-family: Arial, sans-serif;
+    color: #220f90;
+    text-align: right;
+    font-size: x-large;
+    padding-right: 80px;
+    font-weight: bold;
+}
+
+.quote-author{
+    background-color: rgb(255, 255, 255, 0.6);
+    padding: 1px 20px 1px 20px;
+    margin: 180px;
+    border-radius: 8px;
+}
+
+.TEAM-intro{
+    background-color: white;
+}
+.quote-author h3 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(78, 32, 32);
+}
+
+.quote-author h3{
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: 900;
+}
+
+
+
+/* for every heading */
+h2 {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 5px 0px 23px 0px;
+    margin: 5px;
+    font-size: 2.1rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+.core-team:nth-child(1){
+    background-color: rgba(83, 54, 57, 0.8); 
+    background-image: linear-gradient(to bottom,rgb(160 183 209), rgb(1 76 100 / 80%));
+    padding: 8px 20px 20px 20px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.core-team:nth-child(2){
+    background-color: #2a9d8f;
+    background-image:linear-gradient(to bottom, rgb(1 76 100 / 80%), rgb(42, 157, 143)) ; 
+    padding: 8px 20px 20px 20px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 8px;
+}
+
+.core-member{
+    width:250px;
+    margin: 20px 80px 20px 80px; 
+}
+
+.core-member p{
+    margin: 5px 0;
+    font-size: 20px;
+    color: #555;
+}
+
+.team-section:nth-child(3) {
+    background-color: #9c9c2f; 
+    padding: 8px 20px 20px 20px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 8px;
+}
+
+.team-section:nth-child(4) {
+    background-color: #457b9d; 
+    padding: 8px 20px 20px 20px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 8px;
+}
+
+.team-section:nth-child(5) {
+    background-color: #557645; 
+    padding: 8px 20px 20px 20px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 8px;
+}
+
+.team-section:nth-child(6) {
+    background-color: #916730; 
+    padding: 8px 20px 20px 20px;
+    margin:20px 0px 20px 0px;
+    border-radius: 8px;
+}
+
+.team-section:nth-child(7) {
+    background-color: #6a4c93; 
+    padding: 8px 20px 20px 20px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 8px;
+}
+
+/* Card waala div( directions on how to store cards) */
+.core-team-gallery, .team-member-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+/*Card Styling */
+.team-member, .core-member {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0px;
+}
+
+.team-member:hover, .core-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 6px 6px 6px  rgba(0, 0, 0, 0.25);
+}
+
+.core-member:hover{
+    transform: scale(1.05);
+    box-shadow: 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Member Image Styling */
+.team-member img, .core-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* Member Info */
+.team-member p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.gmail-icon {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0077b6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #0077b6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gmail-icon:hover {
+    background-color: #0077b6;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-member, .core-member {
+        width: 100%;
+    }
+
+    .core-team-gallery, .team-member-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,461 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Preloader Animation */
+/* Preloader Styles */
+#preloader {
+    position: fixed; /* Overlay the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark background for the preloader */
+    z-index: 9999; /* Ensures it appears above all other elements */
+    display: flex; /* Centers the animation */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Preloader Bulb Animation (Glow Effect on Border) */
+.preloader-img {
+    width: 150px; /* Bulb size */
+    height: auto;
+    animation: glow-border 4s ease-in-out infinite; /* Glowing border animation */
+    border-radius: 50%; /* Keep bulb circular */
+}
+
+/* Glowing Effect on Border Animation for Bulb */
+@keyframes glow-border {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); /* Initial soft glow */
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 0, 0.7), 0 0 50px rgba(255, 255, 0, 0.4); /* Stronger yellow glow */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); /* Soft glow again */
+    }
+}
+
+/* Preloader Content */
+.preloader-content {
+    text-align: center;
+    animation: fadeIn 4s ease-in-out;
+}
+
+/* Animation for Fading In Preloader Content */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Navigation Bar Styling */
+.top_bar {
+    display: flex;
+    background-color: #0e0e0e; /* Dark background for the bar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    align-items: center;
+    z-index: 1000;
+    padding-right: 50 px;
+}
+
+.logo img {
+    width: 85px;
+    margin-right: 20px; /* Gap between logo and the first link */
+}
+
+.thunder img {
+    width: 50px;
+    margin-right: 20px; /* Gap between logo and the first link */
+    padding-top: 25px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* Equal gap between the links */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li {
+    margin: 0; /* No extra margin */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    transition: color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight on hover */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Section */
+/*
+.header {
+    background-color: #0e0e0e;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 50px;
+}
+
+.header .logo {
+    .logo img {
+        height: 50px; 
+        width: auto;
+    }
+}
+
+.logo img{
+    height: 50px;
+}
+
+.header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.header .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header .nav ul li a:hover {
+    color: #61dafb;
+}
+*/
+
+/* Banner Section */
+.banner {
+    text-align: center;
+    background: linear-gradient(to bottom, #61dafb, #20232a);
+    background-image: url("About_photos/gptBG.jpg");
+    background-size:cover;
+    color: #fff;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.banner .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin: 0 0 20px;
+    font-weight: 700;
+    color: #032a2b;
+}
+
+.banner p {
+    font-size: 18px;
+    margin: 0;
+    color: black;
+}
+
+.banner .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: url('wave.svg') repeat-x;
+    background-size: cover;
+}
+
+
+
+.welcome {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    background: -webkit-linear-gradient(#013303, #011033);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flipIn 5s ease-in-out;
+}
+
+.ees {
+    font-size: 200px;
+    font-weight: 400;
+    font-family: 'Copperplate', fantasy;
+    color: #fff;
+    animation: slideInLeft 4s ease-in-out;
+}
+
+.nitw {
+    font-size: 20px;
+    font-family: 'Papyrus', fantasy;
+    color: #ddd;
+    animation: slideInRight 4s ease-in-out;
+}
+@keyframes flipIn {
+    from {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
+
+.flip-in {
+    animation: flipIn 1s ease-out;
+}
+
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease-out;
+}
+
+/* Text Fade-In Animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Section General Styles */
+section {
+    padding: 60px 20px;
+}
+
+section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #c9ffff;
+}
+
+.about .text {
+    flex: 1;
+}
+
+.about .text h2 {
+    font-size: 28px;
+    color: #20232a;
+    margin-bottom: 20px;
+}
+
+.about .text p {
+    font-size: 16px;
+}
+
+.about .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Events Section */
+.events {
+    text-align: center;
+    background-color: #f9f9f9;
+    background-image: url("About_photos/bluedBG.jpg");
+    background-size: cover;
+    
+}
+
+.events h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.events p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.events .stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    color: white;
+}
+
+.events .stats div {
+    text-align: center;
+}
+
+.events .stats h3 {
+    font-size: 24px;
+    color: #61dafb;
+}
+
+.events .stats p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    background-color: #c9ffff;
+}
+
+.gallery h2 {
+    font-size: 28px;
+    color: #20232a;
+    margin-bottom: 20px;
+}
+
+.gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery .gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    background-color: #20232a;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.contact .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #61dafb;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact .social-media a:hover {
+    color: #fff;
+}
+
+/* Footer General */
+.footer {
+    text-align: center;
+    background-color: #20232a;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer .container p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Footer Developer Section */
+.developers {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #20232a;
+    color: #fff;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+
+.developers div {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.developers strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #61dafb;
+}
+
+.developers .highlight {
+    color: #f0f0f0;
+}

@@ -1,0 +1,367 @@
+/* General Reset */
+body, h1, h2, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+/* Navigation Bar Styling */
+.top_bar {
+    display: flex;
+    background-color: #0e0e0e; /* Dark background for the bar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    align-items: center;
+    z-index: 1000;
+    padding-right: 50 px;
+}
+
+.logo img {
+    width: 85px;
+    margin-right: 20px; /* Gap between logo and the first link */
+}
+
+.thunder img {
+    width: 50px;
+    margin-right: 20px; /* Gap between logo and the first link */
+    padding-top: 25px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* Equal gap between the links */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li {
+    margin: 0; /* No extra margin */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    transition: color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight on hover */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Slider Container */
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #ebd3b9; /* Updated background color */
+    margin-top: 80px;
+    
+}
+
+.slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    background-color: #0e0e0e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.event-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #0e0e0e;  /* Set the background color to black */
+    color: white;             /* Set the text color to white */
+    padding: 10px;            /* Add some padding for spacing around the text */
+    border-radius: 5px;       /* Optional: round the corners */
+}
+
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible */
+    background-color: #0e0e0e ; /* Optional: adds a background color for blank areas * change to #d6d4d2*/
+}
+
+/* Navigation Controls */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    margin-top: 80px;
+}
+
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.slider-controls button:hover {
+    background-color: #a3a3a3;
+}
+
+/* Indicator Dots */
+.indicator-dots {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #004080;
+}
+
+.dot:hover {
+    background-color: #004080;
+}
+
+/* Background Section */
+.background-section {
+    width: 100%;
+    /* background-image: url('i/bg1.jpeg');  */
+    background-color: #0e0e0e;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: Parallax effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align the content at the top */
+    align-items: center;
+    color: white; /* Ensure text is readable */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Add contrast to text */
+    position: relative;
+    padding-top: 0; /* Reduced padding for a more compact layout */
+    margin-top: 0; /* Adjusted margin for less space */
+}
+
+/* Event Box Container */
+.box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 80%;
+    margin-top: -10px; /* Reduced margin to make event boxes sit closer to the top */
+    position: relative;
+    margin-bottom: 40px; /* Add space at the bottom */
+}
+
+/* Event Box */
+.event-box {
+    background-color:rgba(235, 226, 211, 0.7); /*Semi-transparent background */
+    color: #f1f7f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.event-logo img {
+    width: 60px; /* Adjust size of the logo */
+    height: 60px;
+    /* margin-bottom: 5px; Space between logo and heading */
+}
+
+.event-box:hover {
+    transform: translateY(-10px); /* Slightly raise the box */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+.event-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Button inside Event Box */
+.popup-btn {
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.popup-btn:hover {
+    background-color: #0066cc;
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #f8eadb;
+    color: #004080;
+    padding: 30px;
+    max-width: 80%;
+    height: 70%;
+    overflow-y: auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.popup-header hr {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #bbb;
+}
+
+.popup-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.popup-images img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Make images wrap into next line after 5 */
+.popup-images img:nth-child(n+6) {
+    clear: both;
+}
+
+/* Scrollbar Styles */
+.popup-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.popup-content img {
+    max-width: 100%;
+    max-height: 300px; /* Restrict image height */
+    margin: 10px;
+    object-fit: contain; /* Ensures image is fully visible */
+}
+
+/* Social Media Icons */
+.social-media {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between icons */
+}
+
+.social-media a img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    transition: transform 0.3s ease;
+}
+
+/* Preloader Styles */
+#preloader {
+    background: #000 url(i/preload.gif) no-repeat center center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box-container {
+        grid-template-columns: 1fr; /* Stack event boxes on smaller screens */
+        margin-top: 20px;
+    }
+    
+    .popup-content {
+        max-width: 90%; /* Reduce popup width on small screens */
+    }
+}
+

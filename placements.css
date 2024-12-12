@@ -1,0 +1,253 @@
+/* General Reset */
+body, h1, h2, p, div, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: cursive; /* Original font-family */
+    background-color: #111314;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-image: url('internPlace_photos/IG_bright.jpg'); /* Replace with an image related to NIT Warangal */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(222, 230, 233);
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed; /* Overlay the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark background for the preloader */
+    z-index: 9999; /* Ensures it appears above all other elements */
+    display: flex; /* Centers the animation */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Preloader Bulb Animation (Glow Effect on Border) */
+.preloader-img {
+    width: 150px; /* Bulb size */
+    height: auto;
+    animation: glow-border 2s ease-in-out infinite; /* Glowing border animation */
+    border-radius: 50%; /* Keep bulb circular */
+}
+
+/* Glowing Effect on Border Animation for Bulb */
+@keyframes glow-border {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); /* Initial soft glow */
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 0, 0.7), 0 0 50px rgba(255, 255, 0, 0.4); /* Stronger yellow glow */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); /* Soft glow again */
+    }
+}
+
+/* Preloader Content */
+.preloader-content {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation for Fading In Preloader Content */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Left Sidebar Styles */
+.content {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.left-sidebar {
+    width: 30%;
+    padding: 20px;
+    background-color: rgba(244, 6, 6, 0.2);
+    color: rgb(22, 24, 24);
+    height: 100%;
+    z-index: 2;
+    font-size: 1.2rem;
+    animation: slideIn 1.5s forwards;
+}
+
+/* Slide-In Animation for Left Sidebar */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Header Styling */
+.left-sidebar h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Typing Effect for Title */
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Paragraph Styling */
+.left-sidebar p {
+    margin-bottom: 20px;
+}
+
+/* Button Box Container */
+.button-box-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Button Box Styling (Retaining the Original Size and Hover Color) */
+.button-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.827);
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 0.3s, opacity 0.5s ease, transform 0.5s ease;
+    text-decoration: none;
+    opacity: 1;
+    width: 45%; /* Original width */
+    transform: translateY(20px); /* Original position effect */
+}
+
+/* Hover effect for Button Boxes (Original Hover Color and Behavior) */
+.button-box:hover {
+    background-color: rgba(141, 27, 27, 0.9); /* Hover color retained */
+}
+
+/* Icon Styling */
+.button-box i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Main Content Area */
+.main-content {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+/* Navigation Bar Styling */
+
+.top_bar {
+    display: flex;
+    background-color: #0e0e0e; /* Dark background for the bar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    align-items: center;
+    z-index: 1000;
+    padding-right: 50 px;
+    font-family: Arial, sans-serif
+}
+
+.logo img {
+    width: 85px;
+    margin-right: 20px; /* Gap between logo and the first link */
+}
+
+.thunder img {
+    width: 50px;
+    margin-right: 20px; /* Gap between logo and the first link */
+    padding-top: 25px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* Equal gap between the links */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0; /* No extra margin */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight on hover */
+}
+.eesname{
+    margin-top: 19px;
+}
+
+
+/* Ensure content doesn't overlap with navbar */
+.content {
+    margin-top: 80px; /* Adds space for the navbar */
+}
+
+h3 {
+    margin: 0;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

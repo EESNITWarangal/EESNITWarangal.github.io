@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placements</title>
+    <link rel="stylesheet" href="placements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="top_bar" > 
+    <div class="logo">
+        <img src="logo-common_photos/EES_symbol.png" alt="Logo">
+    </div>
+    <div style="display: flex;"> 
+        <div style="display:flex; margin-right:150px;"> 
+            <div class="eesname"> 
+            <h3 style="color:white; padding-top:20px"> ELECTRICAL ENGINEERING SOCIETY</h3>
+            </div> 
+            <div class="thunder">
+                <img src="logo-common_photos/Thunder-image.png" alt="thunder">
+            </div>
+        </div>
+        <div style="padding-top: 40px; "> 
+        <nav>
+            <ul>
+                <li><a href="About.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="databank.html">Data Bank</a></li>
+                <li><a href="placements.html">Placements and Internships</a></li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <!-- Bulb Image with Glowing Animation -->
+            <img src="internPlace_photos/1000038845-removebg-preview (1).png" alt="Electrical Engineering" class="preloader-img">
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="sidebar-sound" src="sidebar-slide.mp3" preload="auto"></audio>
+    <audio id="preloader-sound" src="loading-sound.mp3" preload="auto"></audio>
+
+    <div class="content">
+        <div class="left-sidebar">
+            <h2>
+                Placement and Internship Opportunities 
+            </h2>
+            <p>
+                Our Electrical and Electronics Engineering students are trained to excel in innovation,
+                problem-solving, and industry-leading technologies. With a strong foundation in electrical systems,
+                electronics, and communication, they are prepared to drive impactful change in the world.
+            </p>
+            <p>
+                Our graduates are highly sought after by top companies, ready to lead with technical expertise and a
+                passion for excellence. 
+            </p>
+
+            <div class="button-box-container">
+                <div class="button-box" onclick="showPreloader('intern.html')">
+                    <i class="fa fa-graduation-cap"></i> Internship
+                </div>
+                <div class="button-box" onclick="showPreloader('placement.html')">
+                    <i class="fa fa-briefcase"></i> Placement
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- More content here if necessary -->
+        </div>
+    </div>
+
+    <script>
+        function showPreloader(url) {
+            const preloaderSound = document.getElementById('preloader-sound');
+            preloaderSound.play();
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'flex';
+
+            let progress = 0;
+            const progressBar = document.querySelector('.progress-bar');
+            const interval = setInterval(function() {
+                progress += 10;
+                progressBar.style.width = progress + '%';
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(function() {
+                        window.location.href = url;
+                    }, 500);
+                }
+            }, 200);
+        }
+
+        window.addEventListener('load', function() {
+            const sidebarSound = document.getElementById('sidebar-sound');
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'none';
+
+            const leftSidebar = document.querySelector('.left-sidebar');
+            leftSidebar.addEventListener('animationstart', function() {
+                sidebarSound.play();
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

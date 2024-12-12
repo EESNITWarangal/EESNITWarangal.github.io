@@ -1,0 +1,206 @@
+/* General Styling */
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    background-image: url('internPlace_photos/backgrd image.jpeg');
+    background-size: cover;  /* Ensure the image covers the entire background */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Prevent the image from repeating */
+    color: #333;
+    min-height: 100vh;  /* Ensure body takes at least the full height of the viewport */
+    display: flex;
+    flex-direction: column;  /* Arrange header, grid, and footer vertically */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background: transparent;  /* Remove background color */
+    color: #171616;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Company Grid Section */
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Auto-fill with 120px minimum width per card */
+    gap: 1rem;
+    padding: 2rem;
+    flex-grow: 1;  /* Allow the grid to grow and take up remaining space */
+    box-sizing: border-box;  /* Ensure padding is accounted for */
+    overflow: hidden;  /* Prevent overflow */
+}
+
+/* Individual Company Card Styling */
+.company-card {
+    background: #5b9dc6;  /* Set background color */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 120px; /* Set height and width to make cards square */
+    width: 120px;  /* Set width to make the box square */
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Vertically and horizontally center the content */
+    color: white;  /* Set text color to white for contrast */
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.company-logo {
+    max-width: 100px;  /* Resize the logo to fit within the square card */
+    margin: 0 auto 1rem;
+}
+
+.company-card h3 {
+    font-size: 1rem; /* Adjust font size to fit better in smaller square */
+    color: white;  /* Set text color to white */
+    margin: 0;
+}
+
+/* Modal Styling */
+.info-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.info-content {
+    background:#5b9dc6 ;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.info-content p {
+    font-size: 1.5rem;  /* Larger font size */
+    font-weight: bold;  /* Bold text */
+    color: #333;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #007bff;
+}
+
+/* Coming Soon Modal */
+.coming-soon-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon-content {
+    background: #5b9dc6;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 80%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.coming-soon-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;  /* Full width */
+    background-color: #5b9dc6;
+    color: rgb(13, 13, 13);
+    text-align: start;
+    padding: 0.15rem ;  /* Add padding for better spacing */
+    font-size: 1rem;
+    font-family: cursive;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;  /* Normal flow */
+    margin-top: auto;  /* Push footer to the bottom of the page */
+}
+
+/* Footer Links */
+footer a {
+    color: #121314;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .company-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller grid items for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .company-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smaller grid items for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .company-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Smaller grid items for mobile devices */
+    }
+}

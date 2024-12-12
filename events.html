@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="top_bar" > 
+        <div class="logo">
+            <img src="logo-common_photos/EES_symbol.png" alt="Logo">
+        </div>
+        <div style="display: flex;"> 
+            <div style="display:flex; margin-right:150px;"> 
+                <div> 
+                <h3 style="color:white; padding-top:20px"> ELECTRICAL ENGINEERING SOCIETY</h3>
+                </div> 
+                <div class="thunder">
+                    <img src="logo-common_photos/Thunder-image.png" alt="thunder">
+                </div>
+            </div>
+            <div style="padding-top: 40px; "> 
+            <nav>
+                <ul>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="databank.html">Data Bank</a></li>
+                    <li><a href="placements.html">Placements and Internships</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </div> 
+
+    <div id="preloader"></div> 
+
+
+  
+    <div class="slide-container">
+        <div class="slide" id="slide1">
+            <h2 class="event-heading">Cultural Events</h2>
+            <img src="i/bgcultural.jpg" alt="Cultural Events">
+        </div>
+        <div class="slide" id="slide2">
+            <h2 class="event-heading">Technozion</h2>
+            <img src="i/bgtz.jpg" alt="Technical Events">
+        </div>
+        <div class="slide" id="slide3">
+            <h2 class="event-heading">Guest Lectures</h2>
+            <img src="i/bgguest.jpg" alt="Guest Lectures">
+        </div>
+        <div class="slide" id="slide4">
+            <h2 class="event-heading">Freshmen Festivites</h2>
+            <img src="i/bgfreshers.jpg" alt="technozion">
+        </div>
+        <div class="slide" id="slide5">
+            <h2 class="event-heading">Regular Round-ups</h2>
+            <img src="i/bgreg.jpg" alt="common">
+        </div>
+        <div class="slide" id="slide6">
+            <h2 class="event-heading">Other Events</h2>
+            <img src="i/bgother.jpg" alt="Other Event">
+        </div>
+        <div class="slider-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="indicator-dots">
+            <span class="dot" onclick="showSlide(0)"></span>
+            <span class="dot" onclick="showSlide(1)"></span>
+            <span class="dot" onclick="showSlide(2)"></span>
+            <span class="dot" onclick="showSlide(3)"></span>
+            <span class="dot" onclick="showSlide(4)"></span>
+            <span class="dot" onclick="showSlide(5)"></span>
+        </div>
+    </div>
+    
+
+    <script src="events.js"></script>
+    <!-- Background section starts below the slider -->
+<div class="background-section">
+    <p><h2>Take a look at our events.</h2></p>
+    <!-- Add your background image for this section in CSS -->
+     
+</div>
+<div class="background-section">
+    <div class="box-container">
+        <!-- Box 1: Cultural Events -->
+        <div class="event-box" id="box1">
+            <div class="event-logo">
+                <img src="i/logocultural.png" alt="Cultural Event Logo">
+            </div>
+            <h3>Cultural Events</h3>
+            <p>Celebrating cultures through vibrant performances.</p>
+            <button class="popup-btn" onclick="openPopup(1)">SEE MORE</button>
+        </div>
+        <!-- Box 2: Technozion -->
+        <div class="event-box" id="box2">
+            <div class="event-logo">
+                <img src="i/logotz.png" alt="Technozion Event Logo">
+            </div>
+            <h3>Technozion</h3>
+            <p>Exploring innovation through tech and challenges.</p>
+            <button class="popup-btn" onclick="openPopup(2)">SEE MORE</button>
+        </div>
+        <!-- Box 3: Guest Lectures -->
+        <div class="event-box" id="box3">
+            <div class="event-logo">
+                <img src="i/logoguest.png" alt="GL Event Logo">
+            </div>
+            <h3>Guest Lectures</h3>
+            <p>Learning through expert insights and workshops.</p>
+            <button class="popup-btn" onclick="openPopup(3)">SEE MORE</button>
+        </div>
+        <!-- Box 4: freshers -->
+        <div class="event-box" id="box4">
+            <div class="event-logo">
+                <img src="i/logofresheres.png" alt="freshers Event Logo">
+            </div>
+            <h3>Freshmen Festivites</h3>
+            <p>Welcoming new beginnings with exclusive events.</p>
+            <button class="popup-btn" onclick="openPopup(4)">SEE MORE</button>
+        </div>
+        <!-- Box 5: common -->
+        <div class="event-box" id="box5">
+            <div class="event-logo">
+                <img src="i/logoregular.png" alt="Regular Events Logo">
+            </div>
+            <h3>Regular Round-ups</h3>
+            <p>Blending moments and recurring rituals.</p>
+            <button class="popup-btn" onclick="openPopup(5)">SEE MORE</button>
+        </div>
+        <!-- Box 6: misc -->
+        <div class="event-box" id="box6">
+            <div class="event-logo">
+                <img src="i/logoother.png" alt="other events logo">
+            </div>
+            <h3>Other Events</h3>
+            <p>Finding a new path for our hostings.</p>
+            <button class="popup-btn" onclick="openPopup(6)">SEE MORE</button>
+        </div>
+    </div>
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Teachers Day</h2>
+                <p>5-9-24</p>
+                <div class="popup-images">
+                    <img src="i/cua1.jpeg" alt="Image 1">
+                    <img src="i/cua2.jpeg" alt="Image 2">
+                    <img src="i/cua3.jpeg" alt="Image 3">
+                    <img src="i/cua4.jpeg" alt="Image 4">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <h2>Plantation Drive</h2>
+                <p>On Gandhi Jayanthi 2-10-24</p>
+                <div class="popup-images">
+                    <img src="i/cub1.jpeg" alt="Image 1">
+                    <img src="i/cub2.jpeg" alt="Image 2">
+                    <img src="i/cub3.jpeg" alt="Image 3">
+                    <img src="i/cub4.jpeg" alt="Image 4">
+                    <img src="i/cub5.jpeg" alt="Image 5">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <h2>Diwali Gathering</h2>
+                <p>31-10-24</p>
+                <div class="popup-images">
+                    <img src="i/cuc1.jpeg" alt="Image 1">
+                    <img src="i/cuc2.jpeg" alt="Image 2">
+                    <img src="i/cuc3.jpeg" alt="Image 3">
+                    <img src="i/cuc4.jpeg" alt="Image 4">
+                </div>
+            </div>
+            <span class="close-btn" onclick="closePopup(1)">×</span>
+        </div>
+    </div>
+    
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Voltage Vortex</h2>
+                <p>10-11-24</p>
+                <div class="popup-images">
+                    <img src="i/ta1.jpeg" alt="Image 1">
+                    <img src="i/ta2.jpeg" alt="Image 2">
+                    <img src="i/ta3.jpeg" alt="Image 3">
+                    <img src="i/ta4.jpeg" alt="Image 4">
+                    <img src="i/ta5.jpeg" alt="Image 5">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <h2>Feel the pain</h2>
+                <p>9th and 10th of Nov24</p>
+                <div class="popup-images">
+                    <img src="i/tb1.jpeg" alt="Image 1">
+                    <img src="i/tb2.jpeg" alt="Image 2">
+                    <img src="i/tb3.jpeg" alt="Image 3">
+                    <img src="i/tb4.jpeg" alt="Image 4">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <h2>Matlab Workshop</h2>
+                <p>By Dr. Vinay Kumar Sir on 9-11-24</p>
+                <div class="popup-images">
+                    <img src="i/tc1.jpeg" alt="Image 1">
+                    <img src="i/tc2.jpeg" alt="Image 2">
+                    <img src="i/tc3.jpeg" alt="Image 3">
+                    <img src="i/tc4.jpeg" alt="Image 4">
+                </div>
+            </div>
+
+            <span class="close-btn" onclick="closePopup(2)">×</span>
+        </div>
+    </div>
+    <div id="popup3" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <p><h2>Seminar by Yokogawa</h2>By Industrial Experts 26-10-24</p>
+                <div class="popup-images">
+                    <img src="i/ga1.jpeg" alt="Image 1">
+                    <img src="i/ga2.jpeg" alt="Image 2">
+                    <img src="i/ga3.jpeg" alt="Image 3">
+                    <img src="i/ga4.jpeg" alt="Image 4">
+                    <img src="i/ga5.jpeg" alt="Image 5">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <p><h2>Lecture by Dr.Veera Raju and Dr.N.D.R Sarma</h2>Distinguished Scientists 7-11-24</p>
+                <div class="popup-images">
+                    <img src="i/gb1.jpeg" alt="Image 1">
+                    <img src="i/gb2.jpeg" alt="Image 2">
+                    <img src="i/gb3.jpeg" alt="Image 3">
+                    <img src="i/gb4.jpeg" alt="Image 4">
+                    <img src="i/gb5.jpeg" alt="Image 5">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <p><h2>Workshop on Maxwell using ANSYS</h2>By Mr.Soumitra Kunte 11-11-24</p>
+                <div class="popup-images">
+                    <img src="i/gc1.jpeg" alt="Image 1">
+                    <img src="i/gc2.jpeg" alt="Image 2">
+                    <img src="i/gc3.jpeg" alt="Image 3">
+                </div>
+            </div>
+
+            <span class="close-btn" onclick="closePopup(3)">×</span>
+        </div>
+    </div>
+    <div id="popup4" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <p><h2>Freshers Roadmap</h2>2-9-24</p>
+                <div class="popup-images">
+                    <img src="i/fa1.jpeg" alt="Image 1">
+                    <img src="i/fa2.jpeg" alt="Image 2">
+                    <img src="i/fa3.jpeg" alt="Image 3">
+                    <img src="i/fa4.jpeg" alt="Image 4">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <p><h2>Electro Grove</h2>6-9-24</p> 
+                <div class="popup-images">
+                    <img src="i/fb1.jpeg" alt="Image 1">
+                    <img src="i/fb2.jpeg" alt="Image 2">
+                    <img src="i/fb3.jpeg" alt="Image 3">
+                    <img src="i/fb4.jpeg" alt="Image 4">
+                    <img src="i/fb5.jpeg" alt="Image 5">
+                    <img src="i/fb6.jpeg" alt="Image 6">
+                    <img src="i/fb7.jpeg" alt="Image 7">
+                    <img src="i/fb8.jpeg" alt="Image 8">
+                </div>
+            </div>
+            <span class="close-btn" onclick="closePopup(4)">×</span>
+        </div>
+    </div>
+    <div id="popup5" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <p><h2>Inauguration</h2>22-8-24</p>
+                <div class="popup-images">
+                    <img src="i/coa1.jpeg" alt="Image 1">
+                    <img src="i/coa2.jpeg" alt="Image 2">
+                    <img src="i/coa3.jpeg" alt="Image 3">
+                    <img src="i/coa4.jpeg" alt="Image 4">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <p><h2>Meet the Proffessor</h2>24-10-24</p>
+
+                <div class="popup-images">
+                    <img src="i/cob1.jpeg" alt="Image 1">
+                    <img src="i/cob2.jpeg" alt="Image 2">
+                    <img src="i/cob3.jpeg" alt="Image 3">
+                    <img src="i/cob4.jpeg" alt="Image 4">
+                </div>
+            </div>
+
+
+            <div class="popup-header">
+                <p><h2>FLASH</h2>year long event</p>
+                <div class="popup-images">
+                    <img src="i/coc1.jpeg" alt="Image 1">
+                    <img src="i/coc2.jpeg" alt="Image 2">
+
+                </div>
+            </div>
+
+            <span class="close-btn" onclick="closePopup(5)">×</span>
+        </div>
+    </div>
+    <div id="popup6" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <p><h2>Student Design Competion</h2>22-10-24</p>
+                <div class="popup-images">
+                    <img src="i/ma1.jpeg" alt="Image 1">
+                    <img src="i/ma2.jpeg" alt="Image 2">
+                    <img src="i/ma3.jpeg" alt="Image 3">
+                    <img src="i/ma4.jpeg" alt="Image 4">
+                </div>
+            </div>
+
+            <div class="popup-header">
+                <p><h2>Gate Webinar</h2>7-10-24</p>
+                <div class="popup-images">
+                    <img src="i/mb1.jpeg" alt="Image 1">
+                    <img src="i/mb2.jpeg" alt="Image 2">
+
+                </div>
+            </div>
+
+
+            <div class="popup-header">
+                <p><h2>Cloth Donation Drive</h2>Donated on 15-11-24</p>
+                <div class="popup-images">
+                    <img src="i/mc1.jpeg" alt="Image 1">
+                    <img src="i/mc2.jpeg" alt="Image 2">
+                    <img src="i/mc3.jpeg" alt="Image 3">
+                </div>
+            </div>
+
+            <span class="close-btn" onclick="closePopup(6)">×</span>
+        </div>
+    </div>
+    
+</div>
+<!-- Social Media Icons -->
+<div class="social-media">
+    <a href="https://www.facebook.com/eeanitw/" target="_blank"><img src="i/facebook.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/nitw_ees/" target="_blank"><img src="i/instagram.png" alt="Instagram"></a>
+    <a href="https://in.linkedin.com/company/electrical-engineering-society-ees-nit-warangal" target="_blank"><img src="i/linkedin.png" alt="LinkedIn"></a>
+</div>
+
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+    });
+</script>
+
+</body>
+</html>

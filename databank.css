@@ -1,0 +1,264 @@
+/* General Reset */
+body, h1, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('databank_photos/bg.webp'); /* Path to your image */
+    background-size: cover; /* Scale the image to cover the entire screen */
+    background-position: center 80px; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    height: 100vh; /* Fix the height to fit the screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+}
+
+body, h1, h2, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar Styling */
+
+.top_bar {
+    display: flex;
+    background-color: #0e0e0e; /* Dark background for the bar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    align-items: center;
+    z-index: 1000;
+    padding-right: 50 px;
+}
+
+.logo img {
+    width: 85px;
+    margin-right: 20px; /* Gap between logo and the first link */
+}
+
+.thunder img {
+    width: 50px;
+    margin-right: 20px; /* Gap between logo and the first link */
+    padding-top: 25px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* Equal gap between the links */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0; /* No extra margin */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight on hover */
+}
+/* EES DATABANK Section */
+.header-section {
+    position: absolute;
+    top: 20px; /* Adjust distance from the top */
+    left: 30px; /* Adjust distance from the left edge */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px; /* Space between the text and buttons */
+}
+
+/* Styling for EES DATABANK */
+.databank-title {
+    text-align: left;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px; /* Add letter spacing */
+    line-height: 1.2; /* Adjust line spacing */
+    margin-top: 80px; /* Adjust this value based on the height of the nav bar */
+}
+
+.databank-title span {
+    display: block;
+    font-size: 3rem; /* Larger size for EES */
+    font-weight: bold;
+}
+
+.databank-title .subtext {
+    font-size: 1.0rem; /* Smaller size for DATABANK */
+    font-weight: normal;
+    text-align: center;
+    margin-top: -5px; /* Adjust alignment for perfect stacking */
+}
+
+/* Horizontal Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 80px; /* Adjust this value based on the height of the nav bar */
+}
+
+.header-button {
+    background: #808080; /* Gray background */
+    color: white;
+    font-size: 0.9rem; /* Smaller font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px; /* Smaller button padding */
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header-button:hover {
+    background: #666666; /* Darker gray on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(128, 128, 128, 0.4);
+}
+
+/* Resources Section Centered */
+.resources-container {
+    background-color: rgba(211, 211, 211, 0.8); /* Light gray background */
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: center;
+    width: 400px; /* Fixed width for consistent layout */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+}
+
+.resources-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+}
+
+/* Box Style */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.05); /* Light gray background */
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Subtle border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Regular shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    background: rgba(0, 0, 0, 0.15); /* Darker gray on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Higher z-index to sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Higher z-index to sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff; /* White background */
+    margin: 10% auto; /* Center horizontally and vertically */
+    padding: 30px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    width: 50%; /* Adjust size for screens */
+    text-align: center; /* Center-align text */
+    position: relative; /* To position the close button */
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Close Icon Styling */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: red; /* Red color for the cross */
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: darkred; /* Darker red on hover */
+    transform: scale(1.2); /* Slightly enlarge the cross icon on hover */
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
