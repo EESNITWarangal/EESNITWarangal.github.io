@@ -1,4 +1,4 @@
-/* General Reset */
+* General Reset */
 body, h1, ul, li, a {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
 /* Header Styles */
 header {
     display: flex;
-    background-color: none;
+    background-color:none;
     color: #fff;
 }
 
@@ -28,7 +28,7 @@ header {
     height: 80px;
     align-items: center;
     z-index: 1000;
-    padding-right: 50px;
+    padding-right: 50 px;
 }
 
 .logo img {
@@ -68,7 +68,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffcc00; /* Highlight on hover */
 }
-
 /* EES DATABANK Section */
 .header-section {
     position: absolute;
@@ -82,7 +81,7 @@ nav ul li a:hover {
 
 /* Background Section */
 .background {
-    background-color: none; /* Use a fallback color if no image */
+    background-color:none; /* Use a fallback color if no image */
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -111,73 +110,65 @@ nav ul li a:hover {
     height: 40px; /* Adjust size as needed */
     transition: transform 0.3s ease;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-size: cover;
     background-position: center;
 }
-
-.info {
-    display: flex;
+.info{ 
+    display: flex; 
     justify-content: space-between;
     padding-left: 200px;
-    padding-right: 200px;
+    padding-right:200px;
     text-align: center;
-    margin-top: 50px;
+    margin-top:50px;
 }
-
-.first_info {
-    display: flex;
+.first_info{ 
+    display: flex; 
     justify-content: space-between;
     padding-left: 200px;
-    padding-right: 200px;
+    padding-right:200px;
 }
-
-.second_info {
-    display: flex;
+.second_info{ 
+    display: flex; 
     justify-content: space-between;
     padding-left: 200px;
-    padding-right: 200px;
+    padding-right:200px;
     text-align: center;
 }
-
-.feature {
-    background-color: rgba(255, 255, 255, 0.04);
-    width: 350px;
-    height: 350px;
-    border-color: rgba(255, 255, 255, 0.12);
-    border: solid;
+.feature{ 
+    background-color: rgba(255, 255, 255, 0.04); 
+    width:350px;
+    height:350px;
+    border-color: rgba(255,255,255,0.12);
+    border:solid;
     text-align: left;
-    padding-left: 20px;
-    border-radius: 5%;
-    cursor: pointer;
+    padding-left:20px;
+    border-radius:5%;
+    cursor:pointer;
     margin-right: 4px;
-}
 
-.feature:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.12);
+}
+.feature:hover{ 
+    background-color: rgba(255, 255, 255, 0.08); 
+    border-color: rgba(255,255,255,0.12);
     border-width: 1px;
 }
-
-.icon {
-    background-color: rgba(255, 255, 255, 0.07);
+.icon{ 
+    background-color:rgba(255,255,255,0.07);
     width: 63px;
     height: 60px;
-    border: rgba(255, 255, 255, 0.12);
-    padding-left: 8px;
-    padding-top: 8px;
+    border:rgba(255, 255, 255, 0.12);
+    padding-left:8px;
+    padding-top:8px;
     border-radius: 10%;
 }
-
-.all_features {
-    display: flex;
+.all_features{ 
+    display:flex; 
     justify-content: space-between;
-    padding-left: 250px;
-    padding-right: 250px;
+    padding-left:250px; 
+    padding-right:250px; 
 }
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -185,9 +176,10 @@ body {
     padding-left: 20px;
     background-color: #0e0e0e;
     color: #9ba3b4;
-    padding-right: 50px;
-    height: 100px;
+    padding-right:50px;
+    height:100px;
 }
+
 
 .left-section {
     display: flex;
@@ -214,7 +206,7 @@ body {
     color: #ffffff;
 }
 
-.info {
+.info { 
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -253,115 +245,4 @@ body {
 .icon {
     display: inline-block;
     margin-right: 10px;
-}
-
-/* Mobile (up to 767px) */
-@media (max-width: 767px) {
-    .top_bar {
-        padding-right: 20px;
-        flex-direction: column; /* Stack elements vertically */
-        height: auto; /* Adjust height for smaller screens */
-    }
-    
-    .logo img, .thunder img {
-        width: 70px; /* Resize images for mobile */
-        margin-right: 10px; /* Reduce margin */
-    }
-    
-    nav ul {
-        flex-direction: column; /* Stack navigation items */
-        gap: 20px;
-        align-items: center; /* Center the nav items */
-    }
-    
-    .background h1 {
-        font-size: 2rem; /* Resize heading for mobile */
-        text-align: center; /* Center the text */
-    }
-
-    .info, .first_info, .second_info, .all_features {
-        padding-left: 20px;
-        padding-right: 20px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .feature {
-        width: 100%;
-        margin-bottom: 20px; /* Add space between feature boxes */
-    }
-    
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .left-section, .right-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .icons {
-        flex-direction: column; /* Stack icons vertically */
-    }
-
-    .info {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* Tablet (768px to 1024px) */
-@media (max-width: 1024px) {
-    .top_bar {
-        padding-right: 30px;
-        flex-direction: column; /* Stack elements vertically */
-        height: auto; 
-    }
-
-    .logo img, .thunder img {
-        width: 75px; /* Resize images */
-        margin-right: 15px;
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack navigation items */
-        gap: 30px;
-        align-items: center;
-    }
-
-    .background h1 {
-        font-size: 2.5rem; /* Resize heading */
-        text-align: center;
-    }
-
-    .info, .first_info, .second_info, .all_features {
-        padding-left: 50px;
-        padding-right: 50px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .feature {
-        width: 48%; /* Adjust feature box size for tablets */
-        margin-bottom: 20px; /* Add space between feature boxes */
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .left-section, .right-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .icons {
-        flex-direction: column;
-    }
 }
