@@ -6,35 +6,38 @@
     <title>Team</title>
     <!-- <link rel="stylesheet" href="team.css"> -->
     <link rel="stylesheet" href="team2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
 </head>
 <body>
     <!-- Navigation bar -->
-    <div class="top_bar" > 
-        <div class="logo">
-            <img src="teamPhotographs/EES_symbol.png" alt="Logo">
+    <nav>
+        <div class="logo-container">
+            <img src="/indexPage_photos/EES_symbol.png" alt="Left Logo">
+            <div class="logo"><h1>Electrical Engineering Society</h1></div>
+            <img src="/indexPage_photos/Thunder-image.png" alt="Right Logo">
         </div>
-        <div style="display: flex;"> 
-            <div style="display:flex; margin-right:150px;"> 
-                <div> 
-                <h3 style="color:white; padding-top:20px"> ELECTRICAL ENGINEERING SOCIETY</h3>
-                </div> 
-                <div class="thunder">
-                    <img src="logo-common_photos/Thunder-image.png" alt="thunder">
-                </div>
-            </div>
-            <div style="padding-top: 40px; "> 
-            <nav>
-                <ul>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="databank.html">Data Bank</a></li>
-                    <li><a href="placements.html">Placements and Internships</a></li>
-                </ul>
-            </nav>
-            </div>
-        </div>
-    </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>  
+        <ul class="mainMenu">
+            <li><a href="About.html">About</a></li>
+            <li><a href="team.html">Teams</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="databank.html">Databank</a></li>
+            <li><a href="placements.html">Placements</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+            <span class="icons">
+                <a href="https://www.facebook.com/eeanitw/" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/nitw_ees/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://in.linkedin.com/company/electrical-engineering-society-ees-nit-warangal" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </span>
+        </ul>
+    </nav>
 
     <!-- quote waala div -->
     <div class="quote-author">
@@ -344,4 +347,28 @@
             </div>
         </section>
     </div>
-    
+    <script> 
+        const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
+const menu_items = document.querySelectorAll('nav .mainMenu li a');
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
+
+// close menu when you click on a menu item 
+menu_items.forEach(item => {
+    item.addEventListener('click',function(){
+        close();
+    })
+})
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+function close(){
+    mainMenu.style.top = '-100%';
+}
+ 
+    </script>
