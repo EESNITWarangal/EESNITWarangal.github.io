@@ -115,6 +115,7 @@ h2 {
 
 /* Core team and team section styling */
 .core-team:nth-child(1),
+.core-team:nth-child(2),
 .team-section:nth-child(3),
 .team-section:nth-child(4),
 .team-section:nth-child(5),
@@ -127,6 +128,10 @@ h2 {
 
 .core-team:nth-child(1) {
   background-image: linear-gradient(to bottom, rgb(160, 183, 209), rgb(1 76 100 / 80%));
+}
+
+.core-team:nth-child(2) {
+  background-color: #82f39e;
 }
 
 .team-section:nth-child(3) {
@@ -209,17 +214,26 @@ h2 {
   height: 73%;
 }
 
+
+
 /* Member Info Styling */
 .team-member p, .core-member p,
 .team-member a, .core-member a {
   margin: 0; /* Removes margin */
   padding: 0; /* Removes padding */
 }
+.core-member a{
+  background-color: rgb(56, 58, 51);
+  margin: 3px 65px ;
+  border-radius: 5px;
+  color: #f4f4f4;
+  text-decoration: none;
+}
 
 .team-member p, .core-member p {
   /* margin: 10px 0; */
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 750;
   color: #555;
   height: 50px; /* Fixed height for the name section */
   display: flex;
@@ -242,7 +256,7 @@ h2 {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 160px;
   }
 }
 
