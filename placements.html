@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="placements.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
- 
+    
 </head>
 <body>
 <!-- Navigation Bar -->
-<nav>
+ <!-- Header Section -->
+ <nav>
     <div class="logo-container">
         <img src="/indexPage_photos/EES_symbol.png" alt="Left Logo">
         <div class="logo"><h1>Electrical Engineering Society</h1></div>
@@ -38,85 +39,85 @@
         </span>
     </ul>
 </nav>
+<!--  nav bar end -->
 
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+    <div class="preloader-content">
+        <!-- Bulb Image with Glowing Animation -->
+        <img src="1000038845-removebg-preview (1).png" alt="Electrical Engineering" class="preloader-img">
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+</div>
 
+<audio id="sidebar-sound" src="sidebar-slide.mp3" preload="auto"></audio>
+<audio id="preloader-sound" src="loading-sound.mp3" preload="auto"></audio>
 
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-content">
-            <!-- Bulb Image with Glowing Animation -->
-            <img src="internPlace_photos/1000038845-removebg-preview (1).png" alt="Electrical Engineering" class="preloader-img">
-            <div class="progress-bar-container">
-                <div class="progress-bar"></div>
+<!-- Main Content -->
+<div class="content">
+    <div class="main-content">
+        <h2 style="color:black ">
+            Placement and Internship Opportunities at NIT Warangal Electrical and Electronics Department
+        </h2>
+        <p style="color:black ">
+            Our Electrical and Electronics Engineering students are trained to excel in innovation,
+            problem-solving, and industry-leading technologies. With a strong foundation in electrical systems,
+            electronics, and communication, they are prepared to drive impactful change in the world.
+        </p>
+        <p style="color:black ">
+            Our graduates are highly sought after by top companies, ready to lead with technical expertise and a
+            passion for excellence. 
+        </p>
+
+        <!-- Line separator -->
+        <hr>
+
+        <!-- Button Box Container -->
+        <div class="button-box-container">
+            <div class="button-box" onclick="showPreloader('intern.html')">
+                <i class="fa fa-graduation-cap"></i> Internship
+            </div>
+            <div class="button-box" onclick="showPreloader('placement.html')">
+                <i class="fa fa-briefcase"></i> Placement
             </div>
         </div>
     </div>
+</div>
 
-    <audio id="sidebar-sound" src="sidebar-slide.mp3" preload="auto"></audio>
-    <audio id="preloader-sound" src="loading-sound.mp3" preload="auto"></audio>
+<script>
+    function showPreloader(url) {
+        const preloaderSound = document.getElementById('preloader-sound');
+        preloaderSound.play();
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'flex';
 
-    <div class="content">
-        <div class="left-sidebar">
-            <h2>
-                Placement and Internship Opportunities 
-            </h2>
-            <p>
-                Our Electrical and Electronics Engineering students are trained to excel in innovation,
-                problem-solving, and industry-leading technologies. With a strong foundation in electrical systems,
-                electronics, and communication, they are prepared to drive impactful change in the world.
-            </p>
-            <p>
-                Our graduates are highly sought after by top companies, ready to lead with technical expertise and a
-                passion for excellence. 
-            </p>
+        let progress = 0;
+        const progressBar = document.querySelector('.progress-bar');
+        const interval = setInterval(function() {
+            progress += 10;
+            progressBar.style.width = progress + '%';
+            if (progress >= 100) {
+                clearInterval(interval);
+                setTimeout(function() {
+                    window.location.href = url;
+                }, 500);
+            }
+        }, 200);
+    }
 
-            <div class="button-box-container">
-                <div class="button-box" onclick="showPreloader('intern.html')">
-                    <i class="fa fa-graduation-cap"></i> Internship
-                </div>
-                <div class="button-box" onclick="showPreloader('placement.html')">
-                    <i class="fa fa-briefcase"></i> Placement
-                </div>
-            </div>
-        </div>
+    window.addEventListener('load', function() {
+        const sidebarSound = document.getElementById('sidebar-sound');
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
 
-        <div class="main-content">
-            <!-- More content here if necessary -->
-        </div>
-    </div>
-
-    <script>
-        function showPreloader(url) {
-            const preloaderSound = document.getElementById('preloader-sound');
-            preloaderSound.play();
-            const preloader = document.getElementById('preloader');
-            preloader.style.display = 'flex';
-
-            let progress = 0;
-            const progressBar = document.querySelector('.progress-bar');
-            const interval = setInterval(function() {
-                progress += 10;
-                progressBar.style.width = progress + '%';
-                if (progress >= 100) {
-                    clearInterval(interval);
-                    setTimeout(function() {
-                        window.location.href = url;
-                    }, 500);
-                }
-            }, 200);
-        }
-
-        window.addEventListener('load', function() {
-            const sidebarSound = document.getElementById('sidebar-sound');
-            const preloader = document.getElementById('preloader');
-            preloader.style.display = 'none';
-
-            const leftSidebar = document.querySelector('.left-sidebar');
-            leftSidebar.addEventListener('animationstart', function() {
-                sidebarSound.play();
-            });
+        const leftSidebar = document.querySelector('.left-sidebar');
+        leftSidebar.addEventListener('animationstart', function() {
+            sidebarSound.play();
         });
-        const mainMenu = document.querySelector('.mainMenu');
+    });
+    const mainMenu = document.querySelector('.mainMenu');
 const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 const menu_items = document.querySelectorAll('nav .mainMenu li a');
@@ -139,28 +140,6 @@ function close(){
     mainMenu.style.top = '-100%';
 }
  
-    </script>
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
