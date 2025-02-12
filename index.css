@@ -388,3 +388,16 @@ body {
       padding: 12px;
     }
   }
+.icon-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.feature {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
